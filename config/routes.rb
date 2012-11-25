@@ -1,4 +1,22 @@
 QuesAns::Application.routes.draw do
+resources :opinions
+
+  get "adminis/answers"
+
+  get "adminis/others"
+
+  match "/hints", to: "features#hint"
+  match "/swap" , to: "features#swap"
+  match "/hack" , to: "features#hack"
+  match "/last" , to: "answers#last"
+  match "/index" , to: "quest#index"
+
+  resources :users
+
+
+  resources :answers
+  root to: "users#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

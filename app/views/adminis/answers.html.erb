@@ -1,0 +1,11 @@
+<% @user.each do |f| %>
+<br />
+<%= f.id %>. <%= f.name %><br />
+<%= f.play_name %><br />
+<%= f.contacts %><br />
+<hr />
+<% f.answers.each do |g| %><br /><br />
+Question <%= g.quest_id %>:
+<%= g.ans %><br />
+<% end %>
+<% end %>

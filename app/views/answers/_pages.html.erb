@@ -1,0 +1,12 @@
+<div id = "questions">
+<h1>Question <%= @question.id %></h1>
+</div>
+<p><%= @question.questions %></p>
+<%= form_for(@answer) do |f| %>
+<%= f.label "Answer :" %>
+<%= f.text_field :ans %><br />
+<%= f.hidden_field :timetake , value: Time.now.to_i %>
+<%= f.hidden_field :quest_id , value: @question.id %><br />
+<%= f.submit "Submit Answer" , class: "nottub" %>
+<% end %>
+<%= params[:answer] %>

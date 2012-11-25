@@ -1,0 +1,3 @@
+<h3> Hint for Question <%=params[:quest_id] %></h3>
+<%= @hint.hint %><br /><br /><br />
+<%= link_to 'Return Back to Question' ,user_path(id: @user.id,quest_id: @hint.id) %>

@@ -1,0 +1,5 @@
+<% @all.each do |f| %>
+<% if answered?(f.id) %>
+<%= link_to "Question "+f.id.to_s ,user_path(id: @user.id , quest_id: f.id) %><br />
+<% end %>
+<% end %>

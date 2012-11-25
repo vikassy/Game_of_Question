@@ -1,0 +1,5 @@
+<% @user.each do |f| %>
+<% if f.id != cookies[:user_id].to_i %>
+<%= link_to f.name ,hack_path(user_id: f.id) %><br />
+<% end %>
+<% end %>

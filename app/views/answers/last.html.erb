@@ -1,0 +1,13 @@
+<h1>Thank You for Playing this game !!! Hope you enjoyed </h1>
+<h1>Credits:</h1>
+<ul>
+	<h3>MANI SHANKAR <h3><br />
+	<h3>NITK IEEE <h3>
+</ul>
+<% if !params[:com] %>
+<%= form_for(@opi) do |f| %>
+<%= f.label :comment %><br />
+<%= f.text_area :comment %><br />
+<%= f.submit "Submit" ,class: "nottub" %>
+<% end %>
+<% end %>

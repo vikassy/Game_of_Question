@@ -1,0 +1,35 @@
+<script>
+<% if time_not_over?(cookies[:user_id]) %>
+var sec = <%= timer_sec.to_i %>
+var min = <%= timer_min.to_i %>
+var check = 1;
+<% else %>
+var min = 0
+var sec = 0
+<% end %>
+
+$(document).ready(function() {
+setInterval("clock()",1000);
+});
+function clock()
+ {
+ 	if (check == 1 && min < 10 ) {
+ 		$("#shout").html("<h2>Infinite Hack Generated(You can hack as many accounts as you can , no limitation !!)</h1>");
+ 		check = check +1;
+ 	};
+	if(min <= 0 && sec <= 0)
+		window.location.pathname = "last"
+	else if(sec == 0)
+	{
+		min = min-1;
+		sec = 59;
+	}
+	else
+		sec = sec-1;
+	if (min < 5) {
+	$("#timer").html('<div id="red">'+min+":"+sec+"</div>");
+	}
+	else
+	$("#timer").html('<div id="green">'+min+":"+sec+"</div>");
+ };
+</script>

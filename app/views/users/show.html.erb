@@ -1,0 +1,12 @@
+<%= render 'answers/pages' %>
+<div id="feature">
+<% if !two_hints_used || !two_hacks_used %>
+<h2>Features !!</h2>
+<% if !two_hints_used %>
+<%= link_to 'Get Hint for current question' , hints_path(quest_id: @question.id) %><br />
+<% end %>
+<% if !two_hacks_used %>
+<%= link_to 'Hack Others Answers' , users_path %><br />
+<% end %>
+<% end %>
+</div>

@@ -1,0 +1,26 @@
+<h2>Rules !!</h2>
+
+There will be 15 questions in this Decrypto !!You need to find answers to each question and encrypt it with given algorithm.You can see the next question only when you answer(irrespective of it being right or wrong) its previous questions. <br />
+There are features provided like :- <br />
+1)Hints: <br />
+<br />
+	Where you get hint for a particular question. <br />
+<br />
+2)Hack:<br />
+<br />
+	Here you can hack into other users answer, but the problem is those answers will be encrypted !!You need to decrypt those answers and find the encryption algortihm <br />
+
+<h2>Scores</h2>
+
+<p>
+	Your team will earn 1 point for answering each question and 2 points for finding the encryption/decryption algortihm of others.
+</p>
+
+<h3>There might be some surprises in between the competition !!</h3>
+<%= form_for(@user) do |f| %>
+<%= f.label :play_name , "Name" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :play_name %><br /><br />
+<%= f.label :contacts %>
+<%= f.text_field :contacts %><br /><br />
+<%= f.submit "Submit" , class: "nottub" %><br />
+<% end %>

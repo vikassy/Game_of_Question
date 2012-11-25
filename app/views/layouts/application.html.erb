@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QuesAns</title>
+  <title>Decrypto | IEEE</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+	<h1><i>Decrypto| IEEE</i> </h1>
+	<hr />
+	<div id="shout"></div>
+	<% if @tim %>
+	<%= render 'answers/timer.js' %>
+<h2><div id="timer"><%= timer_min %>:<%= timer_sec %></div></h2>
+<% end %>
 
 <%= yield %>
 

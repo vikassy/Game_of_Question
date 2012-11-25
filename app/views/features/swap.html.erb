@@ -1,0 +1,10 @@
+Note: This Question Will not get any hint !! and it is compulsory that you need to answer this question(irrespective of right or wrong) !!
+<%= @hint.nques %>
+<%= form_for(@answer) do |f| %>
+<%= f.label "Answer :" %>
+<%= f.text_field :ans %><br />
+<%= f.hidden_field :timetake , value: Time.now.to_i %>
+<%= f.hidden_field :quest_id , value: @hint.id %>
+<%= f.submit "Submit Answer" %>
+<% end %>
+<%= params[:answer] %>
